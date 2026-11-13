@@ -4,9 +4,8 @@
 // esta web, que el iPhone conserva aunque se cierre la app.
 (function () {
   'use strict';
-  // PRUEBAS: publicación de prueba. Al aprobarla se cambia por la de los atletas (AKfycbym…).
-  var API = 'https://script.google.com/macros/s/AKfycbyz7Kaj2a3QMrnZds6uCegkWiroXIiUa9sI4CeMp52ZOaGoc8FW-9hZxpl-83AddrBL/exec';
-  try { var guardada = localStorage.getItem('rp:api'); if (/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(guardada || '')) API = guardada; } catch (e) {}
+  // Publicación de los atletas ("RP Coach - App única con acceso por correo autorizado").
+  var API = 'https://script.google.com/macros/s/AKfycbymYHOfrzvOZaSPCqiitapWf48IZa7YicBtR9fDF5X18QWHUpYN_abmjaaU12JCDFgL/exec';
   var CLAVE_UI = 'rp:interfaz:v1';
   var CLAVE_CLIENTE = 'rp:cliente';
   var CODIGO = /^[A-Za-z0-9_-]{32,128}$/;
