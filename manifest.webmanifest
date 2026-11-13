@@ -1,15 +1,27 @@
 {
   "name": "RP Coach",
   "short_name": "RP Coach",
-  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0d0f14",
   "theme_color": "#0d0f14",
   "lang": "es",
   "icons": [
-    { "src": "icono-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icono-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icono-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icono-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icono-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

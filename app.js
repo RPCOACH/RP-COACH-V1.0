@@ -4,7 +4,8 @@
 // esta web, que el iPhone conserva aunque se cierre la app.
 (function () {
   'use strict';
-  var API = 'https://script.google.com/macros/s/AKfycbymYHOfrzvOZaSPCqiitapWf48IZa7YicBtR9fDF5X18QWHUpYN_abmjaaU12JCDFgL/exec';
+  // PRUEBAS: publicación de prueba. Al aprobarla se cambia por la de los atletas (AKfycbym…).
+  var API = 'https://script.google.com/macros/s/AKfycbyz7Kaj2a3QMrnZds6uCegkWiroXIiUa9sI4CeMp52ZOaGoc8FW-9hZxpl-83AddrBL/exec';
   try { var guardada = localStorage.getItem('rp:api'); if (/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(guardada || '')) API = guardada; } catch (e) {}
   var CLAVE_UI = 'rp:interfaz:v1';
   var CLAVE_CLIENTE = 'rp:cliente';
@@ -18,10 +19,8 @@
     else codigo = localStorage.getItem(CLAVE_CLIENTE);
   } catch (e) {}
   if (codigo && !CODIGO.test(codigo)) codigo = null;
-  // Quita el código de la barra de direcciones (el icono se guarda sin él; ya está recordado).
-  if (parametros.get('cliente') && window.history && history.replaceState) {
-    try { history.replaceState(null, '', location.pathname); } catch (e) {}
-  }
+  // El código se queda en la dirección: así el icono de la pantalla de inicio lo conserva
+  // (en el iPhone, la app instalada no comparte almacenamiento con Safari).
 
   // ---- Llamadas al servidor.
   function llamar(accion, args) {
